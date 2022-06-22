@@ -13,10 +13,10 @@ const props = defineProps<AbilitiesProps>();
 <template>
   <div>
     <div class="champion__abilities">
-      <div class="spell-card card" style="width: 18rem;" v-for="spell in spells"
+      <div class="spell-card card" style="width: 18rem;" v-for="(spell, idx) in spells"
         :key="spell.name">
         <img width="64" height="64" class="card-img-top"
-          :src="`http://ddragon.leagueoflegends.com/cdn/12.11.1/img/spell/${spell.image.full}`" :alt="spell.name">
+          :src="`http://ddragon.leagueoflegends.com/cdn/12.11.1/img/${idx === 0 ? 'passive' : 'spell'}/${spell.image.full}`" :alt="spell.name">
         <div class="card-body">
           <h5 class="card-title">{{ spell.name }}</h5>
           <NuxtLink class="btn btn-primary" to="#">Read more</NuxtLink>
