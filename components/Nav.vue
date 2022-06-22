@@ -13,6 +13,9 @@
           <li class="nav-item">
             <NuxtLink class="nav-link" active-class="active" to="/champions">Champions</NuxtLink>
           </li>
+          <li class="nav-item">
+            <NuxtLink class="nav-link" active-class="active" to="/items">Items</NuxtLink>
+          </li>
         </ul>
       </div>
     </div>
